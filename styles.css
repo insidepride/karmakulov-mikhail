@@ -858,3 +858,93 @@ h3 { margin: 0 0 10px; font-size: 24px; line-height: 1.12; }
     font-size: clamp(36px, 11vw, 52px);
   }
 }
+
+@media (max-width: 900px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .v5 .site-header {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    transform: none;
+    width: auto;
+    max-width: none;
+    margin: 10px 0 0;
+    min-height: 58px;
+    border-radius: 999px;
+  }
+
+  .v5 .brand strong {
+    max-width: calc(100vw - 150px);
+  }
+
+  .v5 .ceremony-hero {
+    width: calc(100% - 24px);
+    padding-top: 82px !important;
+  }
+
+  .v5 .ceremony-hero .hero-photo {
+    height: 390px;
+    height: min(49vh, 430px);
+    height: min(49svh, 430px);
+    min-height: 320px;
+    max-height: 430px;
+    border-radius: 28px;
+  }
+
+  .v5 .ceremony-hero .hero-photo img {
+    object-position: 50% 9%;
+  }
+
+  .v5 .ceremony-hero .hero-photo::after {
+    background: linear-gradient(180deg, rgba(18, 11, 9, .02), rgba(18, 11, 9, .08));
+  }
+
+  .v5 .ceremony-hero .hero-copy {
+    margin-top: 16px;
+    padding: 0 2px 10px !important;
+  }
+
+  .v5 .ceremony-hero .eyebrow {
+    margin: 0 0 10px;
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+
+  .v5 .ceremony-hero h1 {
+    margin: 0;
+    font-size: clamp(32px, 9.4vw, 40px) !important;
+    line-height: .96;
+  }
+
+  .v5 .ceremony-hero .lead {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.44;
+  }
+
+  .v5 .ceremony-hero .actions {
+    margin-top: 16px;
+  }
+
+  .v5 .ceremony-hero .button.ghost {
+    min-height: 48px;
+    width: 100%;
+  }
+
+  .v5 .floating-cost.button.circle {
+    z-index: 60;
+    left: 16px;
+    right: 16px;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    height: 54px;
+    min-height: 54px;
+    width: auto;
+    font-size: 13px;
+  }
+}
