@@ -293,7 +293,7 @@ button, input { font: inherit; }
 
 .v5 .ceremony-hero .hero-photo img {
   min-height: 100vh;
-  object-position: 50% 0%;
+  object-position: 50% 18%;
   filter: saturate(.95) contrast(1.04);
 }
 
@@ -412,6 +412,35 @@ button, input { font: inherit; }
 .video-card small { position: absolute; z-index: 1; left: 18px; right: 18px; }
 .video-card span { bottom: 42px; font-weight: 800; font-size: 18px; line-height: 1.2; }
 .video-card small { bottom: 18px; color: rgba(255,255,255,.72); }
+
+.photo-story {
+  display: grid;
+  grid-template-columns: .82fr 1.16fr .82fr;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.photo-story figure {
+  min-height: 430px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.photo-story figure:nth-child(2) {
+  min-height: 520px;
+}
+
+.photo-story img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-story figure:first-child img { object-position: 50% 16%; }
+.photo-story figure:nth-child(2) img { object-position: 50% 50%; }
+.photo-story figure:last-child img { object-position: 50% 18%; }
 
 .about {
   display: grid;
@@ -592,7 +621,7 @@ h3 { margin: 0 0 10px; font-size: 24px; line-height: 1.12; }
     min-height: 100svh;
   }
   .v5 .ceremony-hero .hero-photo img {
-    object-position: 50% 0%;
+    object-position: 50% 14%;
   }
   .v5 .ceremony-hero .hero-copy {
     padding: 98px 10px 34px;
@@ -624,6 +653,9 @@ h3 { margin: 0 0 10px; font-size: 24px; line-height: 1.12; }
   .actions,
   .quiz-actions { grid-template-columns: 1fr; display: grid; }
   .video-card { min-height: 300px; }
+  .photo-story { grid-template-columns: 1fr; }
+  .photo-story figure,
+  .photo-story figure:nth-child(2) { min-height: 420px; }
   .about img { height: 440px; }
   .step { min-height: auto; }
   .package,
