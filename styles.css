@@ -332,6 +332,10 @@ button, input { font: inherit; }
   text-wrap: balance;
 }
 
+.v5 .ceremony-hero h1 span {
+  display: inline;
+}
+
 .v5 .ceremony-hero .lead {
   max-width: 660px;
   color: rgba(255,255,255,.82);
@@ -607,37 +611,77 @@ h3 { margin: 0 0 10px; font-size: 24px; line-height: 1.12; }
   .v5 .site-header {
     width: var(--max);
     border-radius: 0 0 20px 20px;
+    min-height: 64px;
+    padding: 0 10px;
   }
   .v5 .nav {
     background: rgba(34, 26, 23, .94);
     border-color: rgba(255,255,255,.16);
   }
   .v5 .ceremony-hero {
-    min-height: 100svh;
+    width: var(--max);
+    min-height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 84px 0 0;
   }
-  .v5 .ceremony-hero .hero-photo,
-  .v5 .ceremony-hero .hero-photo img,
-  .v5 .ceremony-hero .hero-copy {
-    min-height: 100svh;
+  .v5 .ceremony-hero .hero-photo {
+    width: 100%;
+    min-height: 0;
+    height: min(72svh, 620px);
+    border-radius: 28px;
   }
   .v5 .ceremony-hero .hero-photo img {
-    object-position: 50% 14%;
+    min-height: 0;
+    object-position: 50% 10%;
+  }
+  .v5 .ceremony-hero .hero-photo::after {
+    background: linear-gradient(180deg, rgba(18,11,9,.08), rgba(18,11,9,.26));
   }
   .v5 .ceremony-hero .hero-copy {
-    padding: 98px 10px 34px;
-    justify-content: end;
+    width: 100%;
+    min-height: auto;
+    padding: 0 4px 6px;
+    color: var(--ink);
+    justify-content: start;
+  }
+  .v5 .ceremony-hero .hero-copy::after {
+    display: none;
+  }
+  .v5 .ceremony-hero .eyebrow {
+    color: var(--accent);
   }
   .v5 .ceremony-hero h1 {
-    font-size: clamp(36px, 11vw, 52px);
-    line-height: .96;
+    max-width: 100%;
+    margin-top: 8px;
+    color: var(--ink);
+    font-size: clamp(34px, 10.8vw, 46px);
+    line-height: .98;
+    text-wrap: initial;
+  }
+  .v5 .ceremony-hero h1 span {
+    display: block;
   }
   .v5 .ceremony-hero .lead {
+    max-width: 100%;
+    color: var(--muted);
     font-size: 17px;
+    line-height: 1.5;
+  }
+  .v5 .ceremony-hero .actions {
+    display: flex;
+  }
+  .v5 .ceremony-hero .button.ghost {
+    color: var(--ink);
+    border-color: var(--line);
   }
   .v5 .button.circle {
-    width: 104px;
-    height: 104px;
-    font-size: 12px;
+    width: 92px;
+    height: 92px;
+    font-size: 10px;
+    line-height: 1.15;
   }
   .v5 .floating-cost {
     right: 14px;
